@@ -40,3 +40,10 @@ http://overpass-turbo.eu/
   </union>
   <!-- end of auto repair -->
   <print/>
+  
+# Airport
+  
+  ( SELECT way, aeroway AS type
+    FROM planet_osm_line
+    WHERE aeroway IN ('apron', 'runway', 'taxiway')
+  ) AS data

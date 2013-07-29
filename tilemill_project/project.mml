@@ -1,0 +1,84 @@
+{
+  "bounds": [
+    -69.1954,
+    11.9419,
+    -68.6062,
+    12.4292
+  ],
+  "center": [
+    -68.932,
+    12.1095,
+    12
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 11,
+  "maxzoom": 15,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "palette.mss",
+    "base.mss",
+    "roads.mss"
+  ],
+  "Layer": [
+    {
+      "Datasource": {
+        "file": "/Users/bert/dev/checkouts/monumenten_curacao/tilemill_project/layers/curacao.geojson"
+      },
+      "class": "",
+      "geometry": "polygon",
+      "id": "curacao",
+      "name": "curacao",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "srs-name": "WGS84",
+      "extent": [
+        -69.162897,
+        11.976883,
+        -68.63849,
+        12.392387
+      ],
+      "advanced": {}
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -69.1297556,
+        12.0350401,
+        -68.78643,
+        12.2817289
+      ],
+      "id": "water",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/bert/dev/checkouts/monumenten_curacao/tilemill_project/layers/water.geojson"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "water"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -69.1594635,
+        11.988209,
+        -68.6399518,
+        12.3904364
+      ],
+      "id": "roads",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/bert/dev/checkouts/monumenten_curacao/tilemill_project/layers/roads.geojson"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "roads"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "attribution": "Data © OpenStreetMap (and) contributors, CC-BY-SA",
+  "description": "",
+  "name": "Monumentenapp"
+}
