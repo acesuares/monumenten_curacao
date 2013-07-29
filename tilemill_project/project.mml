@@ -68,7 +68,10 @@
       "id": "roads",
       "class": "",
       "Datasource": {
-        "file": "/Users/bert/dev/checkouts/monumenten_curacao/tilemill_project/layers/roads.geojson"
+        "file": "/Users/bert/dev/checkouts/monumenten_curacao/tilemill_project/layers/roads.geojson",
+        "id": "roads",
+        "project": "tilemill_project",
+        "srs": ""
       },
       "srs-name": "autodetect",
       "srs": "",

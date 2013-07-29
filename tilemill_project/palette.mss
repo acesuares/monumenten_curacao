@@ -22,10 +22,11 @@ Map { font-directory: url(./fonts); }
 /* COLORS
 /* ================================================================== */
 
-@water:             black;
-@land:              rgb(176, 146, 76);
-@road:              lighten(@land,0%);
-@road_outline:      black;
+@water:             #D2EBFA;
+@land:              rgb(255, 208, 70);
+@road:              rgb(200, 7, 82);
+
+@road_outline:      @land;
 
 
 @motorway: 2; 

@@ -6,13 +6,15 @@
 #bridge::outline ,
  {
   line-color: @road_outline;
-  line-width: 1;
-  /*[stylegroup='motorway'] {
+  line-width: 0;
+  line-join: round;
+  line-cap: round;
+  [highway='trunk'] {
     line-width: @motorway_outline;
   }
-  [stylegroup='mainroad'] {
+  [highway='primary'] {
     line-width: @mainroad_outline;
-  }
+  }/*
   [zoom>14][stylegroup='minorroad'] {
     line-width: @minorroad_outline;
   }*/
@@ -22,12 +24,14 @@
 #bridge {
   line-color: @road;
   line-width: 0;
-  /*[stylegroup='motorway'] {
+  line-join: round;
+  line-cap: round;
+  [highway='trunk'] {
     line-width: @motorway;
   }
-  [stylegroup='mainroad'] {
+  [highway='primary'] {
     line-width: @mainroad;
-  }
+  }/*
   [zoom>14][stylegroup='minorroad'] {
     line-width: @minorroad;
   }*/
