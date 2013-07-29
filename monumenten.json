@@ -1,0 +1,19 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -68.851913,
+                    12.0693
+                ]
+            },
+            "properties": {
+                "nummer": 1,
+                "naam": "Monument nummer 1"
+            }
+        }
+    ]
+}
