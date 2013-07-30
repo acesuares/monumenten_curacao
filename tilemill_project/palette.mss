@@ -22,9 +22,9 @@ Map { font-directory: url(./fonts); }
 /* COLORS
 /* ================================================================== */
 
-@water:             #D2EBFA;
-@land:              rgb(255, 208, 70);
-@road:              rgb(200, 7, 82);
+@water:             #DFF0F4;
+@land:              white;
+@road:              #D1D2D2;
 
 @road_outline:      @land;
 
@@ -32,7 +32,3 @@ Map { font-directory: url(./fonts); }
 @motorway: 2; 
 @mainroad: 1.7;
 @minorroad: 1;
-
-@motorway_outline: 8; 
-@mainroad_outline: 7.5;
-@minorroad_outline: 5;
