@@ -1,34 +1,90 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Monumentenapp</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="leaflet.css" />
-	<link rel="stylesheet" href="style.css" />  
-
-	<script src="jquery-1.10.2.min.js"></script>
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<link rel="stylesheet" href="leaflet.css" />        
+  <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
 	<script src="leaflet.js"></script>
-</head>
-<body>
-	<div id="map"></div>
-	<script>
-    $(document).ready(function() {
-  		var map = L.map('map'); //.setView([12.136613, -68.937321], 13);
+    
+    <style type="text/css">
+		#map { min-height: 640px; height: 100%; margin: -15px;}
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		html, body, {
+			height: 100%;
+		}
+	
+	</style>
+    
+</head> 
+<body> 
 
-  		L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
-  			maxZoom: 18,
-  			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://cloudmade.com">CloudMade</a>'
-  		}).addTo(map);      
-      
-      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-        L.geoJson(data).addTo(map);
-      });
-      
-      map.locate({setView: true, maxZoom: 14});
-      
-    });
-	</script>
+<div data-role="page">
+
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-fullscreen="false">
+		<h1>My Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+    
+    	<div id="map"></div>
+		<script>
+	    $(document).ready(function() {
+	      var map = L.map('map').setView([12.136613, -68.937321], 13);
+
+	      L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+	        maxZoom: 18,
+		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://cloudmade.com">CloudMade</a>'
+	      }).addTo(map);      
+
+	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
+	        L.geoJson(data).addTo(map);
+	      });
+
+	      map.locate({setView: true, maxZoom: 13});
+	    });    
+
+		</script>
+    
+	<!-- <script>
+		var map = L.map('map');
+		L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+		}).addTo(map);
+		function onLocationFound(e) {
+			var radius = e.accuracy / 2;
+			L.marker(e.latlng).addTo(map)
+				.bindPopup("You are within " + radius + " meters from this point").openPopup();
+			L.circle(e.latlng, radius).addTo(map);
+		}
+		function onLocationError(e) {
+			alert(e.message);
+		}
+		map.on('locationfound', onLocationFound);
+		map.on('locationerror', onLocationError);
+		map.locate({setView: true, maxZoom: 16});
+	</script> -->
+
+    
+	</div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-fullscreen="false">
+    	<div data-role="navbar" data-position="fixed" data-tap-toggle="false" >
+		<ul>
+			<li><a href="#" id="PROFILE" data-icon="custom">PROFILE</a></li>
+			<li><a href="#" id="CONTACTS" data-icon="custom">CONTACTS</a></li>
+			<li><a href="#" id="TRIPS" data-icon="custom">TRIPS</a></li>
+			<li><a href="#" id="ACCOUNT" data-icon="custom">ACCOUNT</a></li>
+		</ul>
+		</div>
+	</div>
+
+</div><!-- /page -->
+
 </body>
 </html>
-
-
