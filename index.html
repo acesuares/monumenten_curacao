@@ -13,18 +13,20 @@
 	<div id="map"></div>
 	<script>
     $(document).ready(function() {
-  		var map = L.map('map').setView([12.136613, -68.937321], 13);
+  		var map = L.map('map'); //.setView([12.136613, -68.937321], 13);
 
   		L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
   			maxZoom: 18,
   			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://cloudmade.com">CloudMade</a>'
   		}).addTo(map);      
       
-      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monumenten.json', function(data) {
+      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
         L.geoJson(data).addTo(map);
       });
-    });    
-    
+      
+      map.locate({setView: true, maxZoom: 14});
+      
+    });
 	</script>
 </body>
 </html>
