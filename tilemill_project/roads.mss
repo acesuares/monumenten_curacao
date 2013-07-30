@@ -14,10 +14,10 @@
   }
   [highway='primary'] {
     line-width: @mainroad_outline;
-  }/*
-  [zoom>14][stylegroup='minorroad'] {
+  }
+  [zoom>14][highway='residential'] {
     line-width: @minorroad_outline;
-  }*/
+  }
 }
 
 #roads,
@@ -31,10 +31,10 @@
   }
   [highway='primary'] {
     line-width: @mainroad;
-  }/*
-  [zoom>14][stylegroup='minorroad'] {
+  }
+  [zoom>14][highway='residential'] {
     line-width: @minorroad;
-  }*/
+  }
 }
 
 
