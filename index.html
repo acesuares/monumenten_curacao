@@ -72,7 +72,7 @@
 	        
           for (var i = 0; i < data.features.length; i++) {  
             var feature = data.features[i];
-            if (feature.geometry) {          
+            if (feature.geometry && i < 50) {          
               monumentLayer.addData(data.features[i]); 
             }
           }
