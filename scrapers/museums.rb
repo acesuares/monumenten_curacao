@@ -1,4 +1,3 @@
-#!/home/ace/.rvm/rubies/ruby-1.9.3-p194/bin/ruby
 # -*- encoding : utf-8 -*-
 
 require 'rubygems'
