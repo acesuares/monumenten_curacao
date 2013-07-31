@@ -3,6 +3,7 @@ function initMap(){
 	
 	map = L.map('map').setView([12.109913, -68.937321], 15);
 
+  //TODO: set maximum map bounds
   L.tileLayer('http://bertspaan.github.io/monumenten_curacao/tiles/{z}/{x}/{y}.png', {
     minZoom: 11,
     maxZoom: 17,
@@ -25,8 +26,10 @@ function initMap(){
     layer.on('click', onFeatureClick);
   }
   
+  // https://github.com/Leaflet/Leaflet.markercluster
   var markers = L.markerClusterGroup({
-    disableClusteringAtZoom: 17
+    //disableClusteringAtZoom: 17
+    showCoverageOnHover: false
   });
 
   
