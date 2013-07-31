@@ -1,4 +1,5 @@
-var map, monumentsLayer, museumsLayer;
+var map, 
+  monumentsLayer, museumsLayer, routesLayer;
 function initMap() {
 	
 	map = L.map('map').setView([12.109913, -68.937321], 15);
@@ -52,6 +53,14 @@ function initMap() {
       pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, pointStyle);
       }
+  }).addTo(map);
+  
+  routesLayer = new L.geoJson(null, {
+    style: lineStyle,
+      onEachFeature: onEachFeature,
+      pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, pointStyle);
+      }
   }).addTo(map);  
   
   //map.locate({setView: true, maxZoom: 16});
@@ -80,6 +89,11 @@ function addMapData(category, data){
     for (var i = 0; i < data.features.length; i++) { 
       var feature = data.features[i];
       museumsLayer.addData(feature);          
+    }
+  } else if (category === 'routes') {
+    for (var i = 0; i < data.features.length; i++) { 
+      var feature = data.features[i];
+      routesLayer.addData(feature);          
     }
   }
 	
