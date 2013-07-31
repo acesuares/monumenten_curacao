@@ -45,8 +45,15 @@
 				// Feature properties of marker:
 				var properties = e.target.options.properties;
 				// Doe iets!
+				$('#infoHeader').html(e.target.options.properties.name);
+				$('#infoContent').html(e.target.options.properties.characteristics)
+				
+				var str=e.target.options.properties.photo_url;
+				var n=str.replace( "http://www.curacaomonuments.org","http://199.236.83.254" );
+				console.log(n),
+				$("#infoImage").attr("src", n);
 				$(location).attr('href', '#info');
-				//alert(properties.name);
+
 			}
     
 	    	$(document).ready(function() {
@@ -117,18 +124,19 @@
           </h3>
       </div>
       <div data-role="content">
-      <h1>Bargestraat, nr 28</h1>
-		<hr>
+      <h1 id="infoHeader">Bargestraat, nr 28</h1>
+		<hr style="color:white">
           <div style="" data-controltype="image">
-              <img style="width: 400px; height: 266px" src="http://199.236.83.254/getphoto.php?photo_id=414">
-          </div><hr>
+              <img id="infoImage" style="width: 400px; height: 266px" src="http://199.236.83.254/getphoto.php?photo_id=414">
+          </div>
+		<hr style="color:white">
           <div data-controltype="textblock">
-              <p>
-                  <b>
+              <p id="infoContent">
+
                       Dit fraaie huis ligt op het westen met een spandak van twee zadelnokken
                       en een balkondeur van echt grenenhout. De onderste twee bouwlangen schijnnen
                       niet zichtbaar te zijn naaar dat geeft ook niks hoor
-                  </b>
+
               </p>
           </div>
       </div>
