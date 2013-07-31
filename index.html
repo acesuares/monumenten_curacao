@@ -11,7 +11,7 @@
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<script src="js/map.js"></script>
+	<script src="map.js"></script>
 	<script src="leaflet.js"></script>
 
 	<link rel="stylesheet" href="MarkerCluster.css" />
@@ -25,7 +25,7 @@
 		<a href="#routes" data-icon="check" data-transition="slide">Routes</a>
 		<h1>Monumenten</h1>
 	</div>
-	<div data-role="content" data-theme="a">	
+  <div data-role="content" data-theme="a">	
     <div id="map"></div>
 		<script>
 	    function onFeatureClick(e) {
@@ -34,15 +34,15 @@
 				$(location).attr('href', '#info');
 			}
     
-	    	$(document).ready(function() {
+      $(document).ready(function() {
 				
-        		initMap();
-				var outdiv = $('<div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"></div>');
-	      		$.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-
-					jsonMonuments = data;
-					addMapData('monuments', data);
-
+        initMap();
+				
+	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
+          
+  				addMapData('monuments', data);
+          
+          var outdiv = $('<div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"></div>');
 					var innerdiv = $('<div data-role="collapsible" ></div>');
 
 					innerdiv.append('<h3>Monuments</h3>');
@@ -60,16 +60,19 @@
 					}
 					
 					outdiv.append(innerdiv);
-				  	outdiv.appendTo('#output');
+				  outdiv.appendTo('#output');
 					$('#output [data-role=collapsible-set]').collapsibleset();					
 					
-        		});
-	      		$.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
-          			museumMonuments=data;
-					addMapData('museums', data);
+        });
 
-        		});
-
+        $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/routes.json', function(data) {
+          // TODO: don't directly add to map!
+          addMapData('routes', data);
+        });
+       	
+        $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
+          addMapData('museums', data);
+        });
 
 			});
 		</script>
