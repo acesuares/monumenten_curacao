@@ -1,7 +1,22 @@
-var map, monuments;
+var map, monumentsLayer, museumsLayer;
 function initMap() {
 	
 	map = L.map('map').setView([12.109913, -68.937321], 15);
+
+  var lineStyle = {
+    color: "#CE2027",
+    weight: 3,
+    opacity: 0.90
+  };
+
+  var pointStyle = {
+    radius: 5,
+    //fillColor: "#ed7cff",
+    //color: "#000000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.9
+  };
 
   //TODO: set maximum map bounds
   L.tileLayer('http://bertspaan.github.io/monumenten_curacao/tiles/{z}/{x}/{y}.png', {
@@ -18,11 +33,24 @@ function initMap() {
 	}
   map.on('locationfound', onLocationFound);
         
-  // https://github.com/Leaflet/Leaflet.markercluster
-  monuments = L.markerClusterGroup({
+  // More info about Leaflet marker clustering:
+  //   https://github.com/Leaflet/Leaflet.markercluster
+  monumentsLayer = L.markerClusterGroup({
     //disableClusteringAtZoom: 17
     showCoverageOnHover: false
   });
+
+  function onEachFeature(feature, layer) {        
+    layer.on('click', onFeatureClick);
+  }
+  
+  museumsLayer = new L.geoJson(null, {
+    style: lineStyle,
+      onEachFeature: onEachFeature,
+      pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, pointStyle);
+      }
+  }).addTo(map);  
   
   //map.locate({setView: true, maxZoom: 16});
 }
@@ -30,22 +58,21 @@ function initMap() {
 function addMapData(category, data){
 
   if (category === 'monuments') {
-    
     for (var i = 0; i < data.features.length; i++) {
       var feature = data.features[i];
       var latlng = new L.LatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
       var marker = L.marker(latlng, feature.properties);
     
       marker.on('click', onFeatureClick);
-  		monuments.addLayer(marker);
+  		monumentsLayer.addLayer(marker);
     }
-  	map.addLayer(monuments);
+  	map.addLayer(monumentsLayer);
     
   } else if (category === 'museums') {
-
-
-
+    for (var i = 0; i < data.features.length; i++) { 
+      var feature = data.features[i];
+      museumsLayer.addData(feature);          
+    }
   }
 
-	
 }
