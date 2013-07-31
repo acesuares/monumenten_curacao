@@ -60,7 +60,9 @@ function addMapData(category, data){
   if (category === 'monuments') {
     
     var monumentIcon = L.icon({
-      iconUrl: 'images/monument.png'
+      iconUrl: 'images/monument.png',
+      iconSize:     [25, 30],
+      iconAnchor:   [12, 30]
     });
     
     for (var i = 0; i < data.features.length; i++) {
