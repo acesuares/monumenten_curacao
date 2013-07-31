@@ -6,4 +6,4 @@ html, body, {
 	height: 100%;
 }
 
-#map { min-height: 640px; height: 100%; margin: -15px;}
+#map { min-height: 800px; height: 100%; margin: -15px;}

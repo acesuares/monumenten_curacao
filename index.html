@@ -33,22 +33,39 @@
 	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-fullscreen="false" data-theme="a">
 		<a href="#settings" data-icon="delete">settings</a>
 		    <h1>Monumenten</h1>
-		<a href="#routes" data-icon="check">routes</a>
+		<a href="#routes" data-icon="check" data-transition="slide">routes</a>
 	</div><!-- /header -->
 
 	<div data-role="content" data-theme="a">	
     
     	<div id="map"></div>
 		<script>
-		var jsonMonuments;
-	    $(document).ready(function() {
-	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-			jsonMonuments=data;
-			initMap(jsonMonuments);
-        });
-		});
+
+      		var dataList=[];	  
+    
+	    	$(document).ready(function() {
+				var outdiv = $('<div data-role="collapsible-set" data-collapsed="true" data-theme="a" data-content-theme="b"></div>');
+				var innerdiv = $('<div data-role="collapsible" data-theme="a"></div>');
+
+        		initMap();
+
+	      		$.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
+
+					jsonMonuments=data;
+					addMapData('monuments', data);
+					dataList.push(data);
+        		});
+	      		$.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
+          			museumMonuments=data;
+					addMapData('museums', data);
+					dataList.push(data);
+
+        		});
+
+
+			});
 		</script>
-	</div><!-- /content -->
+	</div>
 
 
 </div>
@@ -60,10 +77,9 @@
 		    <h1>Routes</h1>
 	</div><!-- /header -->
 
-	<div data-role="content" data-theme="a">	
-
+	<div data-role="content">
+		<div id="output"></div>
 	</div><!-- /content -->
-
 
 </div>
 
@@ -74,7 +90,8 @@
 		    <h1>Information</h1>
 	</div><!-- /header -->
 
-	<div data-role="content" data-theme="a">	
+	<div data-role="content" data-theme="a">
+			
 
 	</div><!-- /content -->
 

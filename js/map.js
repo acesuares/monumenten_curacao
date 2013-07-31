@@ -1,6 +1,5 @@
-var map;
-
-function initMap(data){
+var map, monuments;
+function initMap() {
 	
 	map = L.map('map').setView([12.109913, -68.937321], 15);
 
@@ -19,31 +18,74 @@ function initMap(data){
 		L.circle(e.latlng, radius).addTo(map);
 	}
   map.on('locationfound', onLocationFound);
-  
-  function onFeatureClick(e) {
-    console.log("test");
 
-  }
-
-  function onEachFeature(feature, layer) {        
-    layer.on('click', onFeatureClick);
-  }
-  
   // https://github.com/Leaflet/Leaflet.markercluster
-  var markers = L.markerClusterGroup({
+  monuments = L.markerClusterGroup({
     //disableClusteringAtZoom: 17
     showCoverageOnHover: false
   });
   
-  for (var i = 0; i < data.features.length; i++) {
-    var feature = data.features[i];
-    var latlng = new L.LatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
-		var marker = L.marker(latlng, feature.properties);
-		//marker.bindPopup(title);
-		markers.addLayer(marker);
-  }
-	map.addLayer(markers);
+  //map.locate({setView: true, maxZoom: 16});
+}
 
-	//map.locate({setView: true, maxZoom: 16});
+function addMapData(category, data){
+  var outdiv = $('<div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"></div>');
+
+  if (category === 'museums')return;
+
+  if (category === 'monuments') {
+
+	var outdiv = $('<div data-role="collapsible-set" data-collapsed="true" data-theme="a" data-content-theme="b"></div>');
+	var innerdiv = $('<div data-role="collapsible" ></div>');
 	
+	innerdiv.append('<h3>Monuments</h3>');
+	var list=$('<ul data-role="listview" data-divider-theme="b" data-inset="true">');
+	innerdiv.append(list);
+
+
+    for (var i = 0; i < data.features.length; i++) {
+      var feature = data.features[i];
+      var latlng = new L.LatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
+      var marker = L.marker(latlng, feature.properties);
+
+    
+      marker.on('click', onFeatureClick);
+  		monuments.addLayer(marker);
+
+		var li=$('<li data-theme="a">');
+		var a=$('<a href="#mapIndex" data-transition="slide">'+feature.properties.name+'</a>')
+
+		li.append(a);
+		list.append(li);
+
+	
+		//createListView(feature)
+    }
+
+  	map.addLayer(monuments);
+    
+  } else if (category === 'museums') {
+
+
+
+  }
+
+	outdiv.append(innerdiv);
+  outdiv.appendTo('#output');
+	$('#output [data-role=collapsible-set]').collapsibleset();
+
+	
+}
+function createListView(data){
+
+	//console.log("data "+data);
+	
+}
+
+function onFeatureClick(e) {
+	// Feature properties of marker:
+	var properties = e.target.options;
+	// Doe iets!
+	$(location).attr('href', '#info');
+	//alert(properties.name);
 }
