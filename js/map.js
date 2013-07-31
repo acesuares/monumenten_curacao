@@ -1,4 +1,5 @@
 var map;
+
 function initMap(data){
 	
 	map = L.map('map').setView([12.109913, -68.937321], 15);
