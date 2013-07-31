@@ -29,25 +29,25 @@
  		$(location).attr('href', '#info');
  	}
 
-   function populateList(id, data, htmlFunction) {
-     d3.select(id).selectAll("li") 
-         .data(data.features)
-       .enter().append("li")
-         .attr("data-theme", "a")
+  function populateList(id, data, htmlFunction) {
+    d3.select(id).selectAll("li") 
+        .data(data.features)
+      .enter().append("li")
+        .attr("data-theme", "a")
         .on("click", function(d) { 
-           $('#infoHeader').html(d.properties.name);
-           $('#infoContent').html(d.properties.characteristics)
+          $('#infoHeader').html(d.properties.name);
+          $('#infoContent').html(d.properties.characteristics)
 
-           var str = d.properties.photo_url;
-           var n = str.replace( "http://www.curacaomonuments.org","http://199.236.83.254" );
+          var str = d.properties.photo_url;
+          var n = str.replace( "http://www.curacaomonuments.org","http://199.236.83.254" );
 	
-           $("#infoImage").attr("src", n);
-           $(location).attr('href', '#info');				
+          $("#infoImage").attr("src", n);
+          $(location).attr('href', '#info');				
         })
       .append("a")
-         .attr("href", "#mapIndex")
-         .attr("data-transition", "slide")
-         .html(htmlFunction);
+        .attr("href", "#mapIndex")
+        .attr("data-transition", "slide")
+        .html(htmlFunction);
    }
 
    $(document).ready(function() {
