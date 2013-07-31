@@ -40,7 +40,8 @@ function initMap() {
   //   https://github.com/Leaflet/Leaflet.markercluster
   monumentsLayer = L.markerClusterGroup({
     //disableClusteringAtZoom: 17
-    showCoverageOnHover: false
+    showCoverageOnHover: false,
+    spiderfyDistanceMultiplier: 1.2
   });
 
   function onEachFeature(feature, layer) {        
@@ -72,7 +73,7 @@ function addMapData(category, data){
     var monumentIcon = L.icon({
       iconUrl: 'images/monument.png',
       iconSize:     [25, 30],
-      iconAnchor:   [12, 30]
+      iconAnchor:   [12, 15]
     });
     
     for (var i = 0; i < data.features.length; i++) {

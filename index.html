@@ -42,45 +42,33 @@
 				$(location).attr('href', '#info');
 
 			}
+      
+      function populateList(id, data, htmlFunction) {
+        d3.select(id).selectAll("li") 
+            .data(data.features)
+          .enter().append("li")
+            .attr("data-theme", "a")
+          .append("a")
+            .attr("href", "#mapIndex")
+            .attr("data-transition", "slide")
+            .html(htmlFunction);
+      }
     
       $(document).ready(function() {
 				
         initMap();
-				
 	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-          
-  				addMapData('monuments', data);
-          
-          var outdiv = $('<div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"></div>');
-					var innerdiv = $('<div data-role="collapsible" ></div>');
-
-					innerdiv.append('<h3>Monuments</h3>');
-					var list = $('<ul data-role="listview" data-divider-theme="b" data-inset="true">');
-					innerdiv.append(list);
-						
-					for (var i = 0; i < data.features.length; i++) {
-						var feature = data.features[i];
-
-						var li=$('<li data-theme="a">');
-						var a=$('<a href="#mapIndex" data-transition="slide">'+feature.properties.name+'</a>')
-
-						li.append(a);
-						list.append(li);
-					}
-					
-					outdiv.append(innerdiv);
-				  outdiv.appendTo('#output');
-					$('#output [data-role=collapsible-set]').collapsibleset();					
-					
+          populateList("#monument-list", data, function(d) {return d.properties.name; });
+  				addMapData('monuments', data);					
         });
-
-        $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/routes.json', function(data) {
-          // TODO: don't directly add to map!
-          addMapData('routes', data);
+        $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
+          populateList("#museum-list", data, function(d) {return d.properties.name; });
+          addMapData('museums', data);
         });
        	
-        $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
-          addMapData('museums', data);
+        $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/routes.json', function(data) {
+          populateList("#route-list", data, function(d) {return d.properties.name; });
+          addMapData('routes', data);
         });
 
 			});
@@ -97,6 +85,20 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
+    <div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+      <div data-role="collapsible" >
+        <h3>Routes</h3>
+        <ul data-role="listview" data-divider-theme="b" data-inset="true" id="route-list">
+      </div>
+      <div data-role="collapsible" >
+        <h3>Museums</h3>
+        <ul data-role="listview" data-divider-theme="b" data-inset="true" id="museum-list">
+      </div>
+      <div data-role="collapsible" >
+        <h3>Monuments</h3>
+        <ul data-role="listview" data-divider-theme="b" data-inset="true" id="monument-list">
+      </div>
+    </div>
 		<div id="output"></div>
 	</div><!-- /content -->
 
