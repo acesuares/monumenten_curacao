@@ -41,24 +41,47 @@
     	<div id="map"></div>
 		<script>
 
-      		var dataList=[];	  
+	  		function onFeatureClick(e) {
+				// Feature properties of marker:
+				var properties = e.target.options.properties;
+				// Doe iets!
+				$(location).attr('href', '#info');
+				//alert(properties.name);
+			}
     
 	    	$(document).ready(function() {
-				var outdiv = $('<div data-role="collapsible-set" data-collapsed="true" data-theme="a" data-content-theme="b"></div>');
-				var innerdiv = $('<div data-role="collapsible" data-theme="a"></div>');
-
+				
         		initMap();
-
+				var outdiv = $('<div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"></div>');
 	      		$.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
 
-					jsonMonuments=data;
+					jsonMonuments = data;
 					addMapData('monuments', data);
-					dataList.push(data);
+
+					var innerdiv = $('<div data-role="collapsible" ></div>');
+
+					innerdiv.append('<h3>Monuments</h3>');
+					var list = $('<ul data-role="listview" data-divider-theme="b" data-inset="true">');
+					innerdiv.append(list);
+						
+					for (var i = 0; i < data.features.length; i++) {
+						var feature = data.features[i];
+
+						var li=$('<li data-theme="a">');
+						var a=$('<a href="#mapIndex" data-transition="slide">'+feature.properties.name+'</a>')
+
+						li.append(a);
+						list.append(li);
+					}
+					
+					outdiv.append(innerdiv);
+				  	outdiv.appendTo('#output');
+					$('#output [data-role=collapsible-set]').collapsibleset();					
+					
         		});
 	      		$.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
           			museumMonuments=data;
 					addMapData('museums', data);
-					dataList.push(data);
 
         		});
 
