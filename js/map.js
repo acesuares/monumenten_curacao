@@ -19,7 +19,8 @@ function initMap() {
   };
 
   //TODO: set maximum map bounds
-  L.tileLayer('http://bertspaan.github.io/monumenten_curacao/tiles/{z}/{x}/{y}.png', {
+  L.tileLayer('http://a.tiles.mapbox.com/v3/acesuares.curacao-monumenten/{z}/{x}/{y}.png', {
+  //L.tileLayer('http://bertspaan.github.io/monumenten_curacao/tiles/{z}/{x}/{y}.png', {
     minZoom: 11,
     maxZoom: 19,
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
