@@ -65,24 +65,24 @@
 
        $(document).ready(function() {
 				
-         initMap();
- 	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-           populateList("#monument-list", data, function(d) {return d.properties.name; });
-   				addMapData('monuments', data);					
-         });
-         $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
-           populateList("#museum-list", data, function(d) {return d.properties.name; });
-           addMapData('museums', data);
-         });
-      	
-         $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/routes.json', function(data) {
-           populateList("#route-list", data, function(d) {return d.properties.name; });
-           addMapData('routes', data);
-         });
 
- 			});
- 		</script>
- 	</div>
+
+          initMap();
+  	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
+            populateList("#monument-list", data, function(d) {return d.properties.name; });
+    				addMapData('monuments', data);					
+          });
+          
+          $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
+            populateList("#museum-list", data, function(d) {return d.properties.name; });
+            addMapData('museums', data);
+          });
+       	
+          // $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/routes.json', function(data) {
+          //   populateList("#route-list", data, function(d) {return d.properties.name; });
+          //   addMapData('routes', data);
+          // });
+
 
  </div>
 
