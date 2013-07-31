@@ -42,3 +42,6 @@ Map { font-directory: url(./fonts); }
 
 @road_text: #555;
 @road_halo: @land;
+
+@place_text: #555;
+@place_halo: @land;

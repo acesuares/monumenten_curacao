@@ -19,7 +19,8 @@
     "palette.mss",
     "labels.mss",
     "base.mss",
-    "roads.mss"
+    "roads.mss",
+    "places.mss"
   ],
   "Layer": [
     {
@@ -78,6 +79,27 @@
       "srs": "",
       "advanced": {},
       "name": "roads"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -69.1536003,
+        11.9935303,
+        -68.6427349,
+        12.3725874
+      ],
+      "id": "places",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/bert/dev/checkouts/monumenten_curacao/tilemill_project/layers/places.geojson",
+        "id": "places",
+        "project": "tilemill_project",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "places"
     }
   ],
   "scale": 1,

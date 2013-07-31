@@ -41,9 +41,10 @@ http://overpass-turbo.eu/
   <!-- end of auto repair -->
   <print/>
   
-# Airport
-  
-  ( SELECT way, aeroway AS type
-    FROM planet_osm_line
-    WHERE aeroway IN ('apron', 'runway', 'taxiway')
-  ) AS data
+# Places
+
+  <query type="node">
+    <has-kv k="place" />    
+    <bbox-query {{bbox}}/>
+  </query>
+  <print/>
