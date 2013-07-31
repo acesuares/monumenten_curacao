@@ -28,9 +28,21 @@
     
     	<div id="map"></div>
 		<script>
+      function onFeatureClick(e) {
+        // Feature properties of marker:
+        var properties = e.target.options;
+        // Doe iets!
+        alert(properties.name);
+      }  
+    
 	    $(document).ready(function() {
+         
+        initMap();
 	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-          initMap(data);
+          addMapData('monuments', data);
+        });
+	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
+          addMapData('museums', data);
         });
 		});
 		</script>

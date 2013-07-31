@@ -1,5 +1,5 @@
-var map;
-function initMap(data){
+var map, monuments;
+function initMap() {
 	
 	map = L.map('map').setView([12.109913, -68.937321], 15);
 
@@ -17,30 +17,35 @@ function initMap(data){
 		L.circle(e.latlng, radius).addTo(map);
 	}
   map.on('locationfound', onLocationFound);
-  
-  function onFeatureClick(e) {
-    // Doe iets!
-  }
-
-  function onEachFeature(feature, layer) {        
-    layer.on('click', onFeatureClick);
-  }
-  
+        
   // https://github.com/Leaflet/Leaflet.markercluster
-  var markers = L.markerClusterGroup({
+  monuments = L.markerClusterGroup({
     //disableClusteringAtZoom: 17
     showCoverageOnHover: false
   });
   
-  for (var i = 0; i < data.features.length; i++) {
-    var feature = data.features[i];
-    var latlng = new L.LatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
-		var marker = L.marker(latlng, feature.properties);
-		//marker.bindPopup(title);
-		markers.addLayer(marker);
-  }
-	map.addLayer(markers);
+  //map.locate({setView: true, maxZoom: 16});
+}
 
-	//map.locate({setView: true, maxZoom: 16});
+function addMapData(category, data){
+
+  if (category === 'monuments') {
+    
+    for (var i = 0; i < data.features.length; i++) {
+      var feature = data.features[i];
+      var latlng = new L.LatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
+      var marker = L.marker(latlng, feature.properties);
+    
+      marker.on('click', onFeatureClick);
+  		monuments.addLayer(marker);
+    }
+  	map.addLayer(monuments);
+    
+  } else if (category === 'museums') {
+
+
+
+  }
+
 	
 }
