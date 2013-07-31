@@ -8,9 +8,9 @@ function initMap(){
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://cloudmade.com">CloudMade</a>'
       }).addTo(map);      
 
-      // $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-      // 	        L.geoJson(data).addTo(map);
-      // 	      });
+      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
+            	        L.geoJson(data).addTo(map);
+            	      });
 
       function onLocationFound(e) {
 		var radius = e.accuracy / 2;
