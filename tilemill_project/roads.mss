@@ -28,6 +28,7 @@
 
   [highway='residential'],
   [highway='tertiary'],
+  [highway='service'],
   [highway='pedestrian'],
   [highway='track'],
   [highway='footway'] {
@@ -49,10 +50,10 @@
 /* Labels
 /* ================================================================== */
 
-#roads::labels[highway='trunk'][zoom>12],
-#roads::labels[highway='primary'][zoom>12],
-#roads::labels[highway='secondary'][zoom>13],
-#roads::labels[highway='tertiary'][zoom>13] {
+#road_labels[highway='trunk'][zoom>12],
+#road_labels[highway='primary'][zoom>12],
+#road_labels[highway='secondary'][zoom>13],
+#road_labels[highway='tertiary'][zoom>13] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
@@ -63,7 +64,7 @@
   text-size:11;
 }
 
-#roads::labels[zoom>14] {
+#road_labels[zoom>14] {
   [bridge='yes'],
   [highway='track'],
   [highway='footway'],
