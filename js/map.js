@@ -1,5 +1,5 @@
 var map;
-function initMap(){
+function initMap(data){
 	
 	map = L.map('map').setView([12.109913, -68.937321], 15);
 
@@ -31,18 +31,15 @@ function initMap(){
     //disableClusteringAtZoom: 17
     showCoverageOnHover: false
   });
-
   
-  $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-    for (var i = 0; i < data.features.length; i++) {
-      var feature = data.features[i];
-      var latlng = new L.LatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
-			var marker = L.marker(latlng, feature.properties);
-			//marker.bindPopup(title);
-			markers.addLayer(marker);
-    }
-		map.addLayer(markers);
-  });
+  for (var i = 0; i < data.features.length; i++) {
+    var feature = data.features[i];
+    var latlng = new L.LatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
+		var marker = L.marker(latlng, feature.properties);
+		//marker.bindPopup(title);
+		markers.addLayer(marker);
+  }
+	map.addLayer(markers);
 
 	//map.locate({setView: true, maxZoom: 16});
 	

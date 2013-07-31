@@ -29,7 +29,9 @@
     	<div id="map"></div>
 		<script>
 	    $(document).ready(function() {
-	      	initMap();
+	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
+          initMap(data);
+        });
 		});
 		</script>
 	</div><!-- /content -->
