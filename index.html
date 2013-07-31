@@ -62,6 +62,10 @@
 						var feature = data.features[i];
 
 						var li=$('<li data-theme="a">');
+						var title = $("em").attr("title");
+						  $("div").text(title);
+						
+						
 						var a=$('<a href="#mapIndex" data-transition="slide">'+feature.properties.name+'</a>')
 
 						li.append(a);
@@ -113,11 +117,14 @@
           </h3>
       </div>
       <div data-role="content">
-      <h1 id="infoHeader">Bargestraat, nr 28</h1>
+      <h2 id="infoHeader">Bargestraat, nr 28</h2>
+	  
 		<hr style="color:white">
+		<br>
           <div style="" data-controltype="image">
               <img id="infoImage" style="width: 400px; height: 266px" src="http://199.236.83.254/getphoto.php?photo_id=414">
           </div>
+		<br>
 		<hr style="color:white">
           <div data-controltype="textblock">
               <p id="infoContent">

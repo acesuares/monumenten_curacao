@@ -7,3 +7,5 @@ html, body, {
 }
 
 #map { min-height: 800px; height: 100%; margin: -15px;}
+img { max-width: 100%; }
+}
