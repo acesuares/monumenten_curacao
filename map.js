@@ -41,7 +41,8 @@ function initMap() {
   monumentsLayer = L.markerClusterGroup({
     //disableClusteringAtZoom: 17
     showCoverageOnHover: false,
-    spiderfyDistanceMultiplier: 1.2
+    spiderfyDistanceMultiplier: 1.2,
+    maxClusterRadius: 40
   });
 
   function onEachFeature(feature, layer) {        
