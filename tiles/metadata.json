@@ -1,0 +1,11 @@
+{
+    "attribution": "Data \u00a9 OpenStreetMap (and) contributors, CC-BY-SA", 
+    "description": "", 
+    "bounds": "-69.1775,11.9617,-68.6275,12.3765", 
+    "name": "Monumentenapp", 
+    "minzoom": "11", 
+    "version": "1.0.0", 
+    "template": "", 
+    "maxzoom": "16", 
+    "center": "-68.9262,12.1071,11"
+}
