@@ -5,7 +5,7 @@ function initMap(){
 
   L.tileLayer('http://bertspaan.github.io/monumenten_curacao/tiles/{z}/{x}/{y}.png', {
     minZoom: 11,
-    maxZoom: 16,
+    maxZoom: 17,
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
   }).addTo(map);      
 
