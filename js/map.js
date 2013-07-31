@@ -1,29 +1,48 @@
 var map;
 function initMap(){
 	
-	map = L.map('map'); //.setView([12.136613, -68.937321], 13);
+	map = L.map('map').setView([12.109913, -68.937321], 15);
 
-      L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://cloudmade.com">CloudMade</a>'
-      }).addTo(map);      
+  L.tileLayer('http://bertspaan.github.io/monumenten_curacao/tiles/{z}/{x}/{y}.png', {
+    minZoom: 11,
+    maxZoom: 17,
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  }).addTo(map);      
 
-      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-            	        L.geoJson(data).addTo(map);
-            	      });
 
-      function onLocationFound(e) {
+  function onLocationFound(e) {
 		var radius = e.accuracy / 2;
 		L.marker(e.latlng).addTo(map)
 			.bindPopup("You are within " + radius + " meters from this point").openPopup();
 		L.circle(e.latlng, radius).addTo(map);
 	}
-	function onLocationError(e) {
-		alert(e.message);
-	}
-	map.on('locationfound', onLocationFound);
-	map.on('locationerror', onLocationError);
-	map.locate({setView: true, maxZoom: 16});
-    ;
+  map.on('locationfound', onLocationFound);
+  
+  function onFeatureClick(e) {
+    console.log("test");
+
+  }
+
+  function onEachFeature(feature, layer) {        
+    layer.on('click', onFeatureClick);
+  }
+  
+  var markers = L.markerClusterGroup({
+    disableClusteringAtZoom: 17
+  });
+
+  
+  $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
+    for (var i = 0; i < data.features.length; i++) {
+      var feature = data.features[i];
+      var latlng = new L.LatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
+			var marker = L.marker(latlng, feature.properties);
+			//marker.bindPopup(title);
+			markers.addLayer(marker);
+    }
+		map.addLayer(markers);
+  });
+
+	//map.locate({setView: true, maxZoom: 16});
 	
 }
