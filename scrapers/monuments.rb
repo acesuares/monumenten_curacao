@@ -69,18 +69,28 @@ features = []
       end
       
       rows_single.each { |row|
-        key, value = row.text.gsub(/\s+/, ' ').split(':', 2).map{ |s| s.strip } 
-        key = key.gsub(' ', '_').downcase
-        if key == 'more_information_by'
-          new_value = {}
-          INFO_TYPES.each do |info_type|
-            if value.include? info_type
-              new_value[info_type.downcase] = INFO_BASE_URL % [info_type.downcase, geocode]
+      
+        #row = row.text.gsub(/\s+/, ' ') # replace tabs, spaces and newlines by single spaces
+        nrow = Nokogiri::HTML(row.to_s.gsub(/\s+/, ' ').gsub(/<br>/,'œ'))
+        nrow.css('font').each do |frow|
+          frow = frow.text.gsub(': œ',':').gsub('œ ',' ')
+          frow.split('œ').each do |srow|
+            unless srow.length == 2 # weird stuff, ask me about it
+              key, value = srow.split(':', 2).map{ |s| s.strip }
+              key = key.gsub(' ', '_').downcase
+              if key == 'more_information_by'
+                INFO_TYPES.each do |info_type|
+                  if value.include? info_type
+                    properties['more_information_by_' + info_type.downcase] = INFO_BASE_URL % [info_type.downcase, geocode]
+                  end
+                end  
+              else
+                value = geocode if value == 'None'
+                properties[key] = value 
+              end
             end
           end
-          value = new_value
         end
-        properties[key] = value unless value == 'None' 
       }
       
       feature = {
@@ -99,7 +109,11 @@ features = []
         }
         puts "\t\t #{address} > #{feature["geometry"]["coordinates"].inspect}"
       else
-        puts "\t\t #{address} > :("
+        feature["geometry"] = {
+          "type" => "Point",
+          "coordinates" => [-68.9889907836914, 12.124928554652737]
+        }
+        puts "\t\t #{address} > IN THE SEA"
       end
       features << feature      
     end
