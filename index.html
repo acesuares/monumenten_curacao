@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+ <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="map.js"></script>
 	<script src="leaflet.js"></script>
 
@@ -20,123 +20,117 @@
 </head> 
 <body> 
 
-<div data-role="page" data-theme="a" id="mapIndex">
-	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-fullscreen="false" data-theme="a">
-		<a href="#routes" data-icon="check" data-transition="slide">Routes</a>
-		<h1>Monumenten</h1>
-	</div>
-  <div data-role="content" data-theme="a">	
-    <div id="map"></div>
-		<script>
-	    function onFeatureClick(e) {
-				// Feature properties of marker:
-				var properties = e.target.options.properties;
+ <div data-role="page" data-theme="a" id="mapIndex">
+ 	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-fullscreen="false" data-theme="a">
+ 		<a href="#list" data-icon="check" data-transition="slide">List</a>
+ 		<h1>Monumenten</h1>
+ 	</div>
+   <div data-role="content" data-theme="a">	
+     <div id="map"></div>
+ 		<script>
+ 	    function onFeatureClick(e) {
+ 				// Feature properties of marker:
+ 				var properties = e.target.options.properties;
 
-				$('#infoHeader').html(e.target.options.properties.name);
-				$('#infoContent').html(e.target.options.properties.characteristics)
+ 				$('#infoHeader').html(e.target.options.properties.name);
+ 				$('#infoContent').html(e.target.options.properties.characteristics)
 				
-				var str=e.target.options.properties.photo_url;
-				var n=str.replace( "http://www.curacaomonuments.org","http://199.236.83.254" );
-				console.log(n),
-				$("#infoImage").attr("src", n);
-				$(location).attr('href', '#info');
+ 				var str=e.target.options.properties.photo_url;
+ 				var n=str.replace( "http://www.curacaomonuments.org","http://199.236.83.254" );
+ 				console.log(n),
+ 				$("#infoImage").attr("src", n);
+ 				$(location).attr('href', '#info');
+ 			}
 
-			}
-    
-      $(document).ready(function() {
+       function populateList(id, data, htmlFunction) {
+         d3.select(id).selectAll("li") 
+             .data(data.features)
+           .enter().append("li")
+             .attr("data-theme", "a")
+			 .on("click", function(d) { 
+				$('#infoHeader').html(d.properties.name);
+ 				$('#infoContent').html(d.properties.characteristics)
+
+ 				var str=d.properties.photo_url;
+ 				var n=str.replace( "http://www.curacaomonuments.org","http://199.236.83.254" );
+ 				console.log(n),
+ 				$("#infoImage").attr("src", n);
+ 				$(location).attr('href', '#info');				
+			})
+           .append("a")
+             .attr("href", "#mapIndex")
+             .attr("data-transition", "slide")
+             .html(htmlFunction);
+       }
+
+       $(document).ready(function() {
 				
-        initMap();
-				
-	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
-          
-  				addMapData('monuments', data);
-          
-          var outdiv = $('<div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"></div>');
-					var innerdiv = $('<div data-role="collapsible" ></div>');
+         initMap();
+ 	      $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/monuments.json', function(data) {
+           populateList("#monument-list", data, function(d) {return d.properties.name; });
+   				addMapData('monuments', data);					
+         });
+         $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
+           populateList("#museum-list", data, function(d) {return d.properties.name; });
+           addMapData('museums', data);
+         });
+      	
+         $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/routes.json', function(data) {
+           populateList("#route-list", data, function(d) {return d.properties.name; });
+           addMapData('routes', data);
+         });
 
-					innerdiv.append('<h3>Monuments</h3>');
-					var list = $('<ul data-role="listview" data-divider-theme="b" data-inset="true">');
-					innerdiv.append(list);
-						
-					for (var i = 0; i < data.features.length; i++) {
-						var feature = data.features[i];
+ 			});
+ 		</script>
+ 	</div>
 
-						var li=$('<li data-theme="a">');
-						var title = $("em").attr("title");
-						  $("div").text(title);
-						
-						
-						var a=$('<a href="#mapIndex" data-transition="slide">'+feature.properties.name+'</a>')
+ </div>
 
-						li.append(a);
-						list.append(li);
-					}
-					
-					outdiv.append(innerdiv);
-				  outdiv.appendTo('#output');
-					$('#output [data-role=collapsible-set]').collapsibleset();					
-					
-        });
+ <div data-role="page" data-theme="a" id="list">
 
-        $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/routes.json', function(data) {
-          // TODO: don't directly add to map!
-          addMapData('routes', data);
-        });
-       	
-        $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/museums.json', function(data) {
-          addMapData('museums', data);
-        });
+ 	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-fullscreen="false" data-theme="a">
+ 		<a href="#mapIndex" data-icon="delete">Back</a>
+ 		    <h1>List</h1>
+ 	</div><!-- /header -->
 
-			});
-		</script>
-	</div>
-
-</div>
-
-<div data-role="page" data-theme="a" id="routes">
-
-	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-fullscreen="false" data-theme="a">
-		<a href="#mapIndex" data-icon="delete">Back</a>
-		    <h1>Routes</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">
-		<div id="output"></div>
-	</div><!-- /content -->
-
-</div>
-
-<div data-role="page" data-theme="a" id="info">
-
-	<div data-theme="a" data-role="header">
-          <a data-role="button" href="#mapIndex" class="ui-btn-left" data-icon="delete">
-              back
-          </a>
-          <h3>
-              Monument Info
-          </h3>
-      </div>
-      <div data-role="content">
-      <h2 id="infoHeader">Bargestraat, nr 28</h2>
-	  
-		<hr style="color:white">
-		<br>
-          <div style="" data-controltype="image">
-              <img id="infoImage" style="width: 400px; height: 266px" src="http://199.236.83.254/getphoto.php?photo_id=414">
-          </div>
-		<br>
-		<hr style="color:white">
-          <div data-controltype="textblock">
-              <p id="infoContent">
-
-                      Dit fraaie huis ligt op het westen met een spandak van twee zadelnokken
-                      en een balkondeur van echt grenenhout. De onderste twee bouwlangen schijnnen
-                      niet zichtbaar te zijn naaar dat geeft ook niks hoor
-
-              </p>
-          </div>
-      </div>
-</div>
-
+ 	<div data-role="content">
+     <div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+       <div data-role="collapsible" >
+         <h3>Routes</h3>
+         <ul data-role="listview" data-divider-theme="b" data-inset="true" id="route-list">
+       </div>
+       <div data-role="collapsible" >
+         <h3>Museums</h3>
+         <ul data-role="listview" data-divider-theme="b" data-inset="true" id="museum-list">
+       </div>
+       <div data-role="collapsible" >
+         <h3>Monuments</h3>
+         <ul data-role="listview" data-divider-theme="b" data-inset="true" id="monument-list">
+       </div>
+     </div>
+ 		<div id="output"></div>
+ 	</div><!-- /content -->
+ </div>
+ <div data-role="page" data-theme="a" id="info">
+ 	<div data-theme="a" data-role="header">
+     <a data-role="button" href="#mapIndex" class="ui-btn-left" data-icon="delete">
+       Back
+     </a>
+     <h3>
+       Monument Info
+     </h3>
+   </div>
+   <div data-role="content">
+     <h1 id="infoHeader" style="opacity:0.25; padding: 6px; background-color:black"></h1>
+ 		<hr style="color:white ">
+     <div style="" data-controltype="image">
+       <img id="infoImage" style="width: 400px; height: 266px" src="">
+     </div>
+ 		<hr style="color:white">
+     <div data-controltype="textblock" style="opacity:0.25; padding: 6px; background-color:black ">
+       <p id="infoContent" ></p>
+     </div>
+   </div>
+ </div>
 </body>
 </html>
