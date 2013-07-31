@@ -21,7 +21,7 @@ function initMap() {
   //TODO: set maximum map bounds
   L.tileLayer('http://bertspaan.github.io/monumenten_curacao/tiles/{z}/{x}/{y}.png', {
     minZoom: 11,
-    maxZoom: 17,
+    maxZoom: 19,
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
   }).addTo(map);      
 
@@ -58,11 +58,16 @@ function initMap() {
 function addMapData(category, data){
 
   if (category === 'monuments') {
+    
+    var monumentIcon = L.icon({
+      iconUrl: 'images/monument.png'
+    });
+    
     for (var i = 0; i < data.features.length; i++) {
       var feature = data.features[i];
       var latlng = new L.LatLng(feature.geometry.coordinates[1], feature.geometry.coordinates[0]);
-      var marker = L.marker(latlng, feature.properties);
-    
+      var marker = L.marker(latlng, {icon: monumentIcon, properties: feature.properties});
+
       marker.on('click', onFeatureClick);
   		monumentsLayer.addLayer(marker);
     }
