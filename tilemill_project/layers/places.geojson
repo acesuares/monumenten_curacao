@@ -1,0 +1,1918 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2013-07-31T13:14:01Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "50032892",
+        "created_by": "Potlatch 0.10f",
+        "is_in": "Netherlands Antilles",
+        "name": "Curaçao",
+        "place": "island",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.955814,
+          12.1802603
+        ]
+      },
+      "id": "node/50032892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "50033577",
+        "capital": "yes",
+        "name": "Willemstad",
+        "name:ar": "يلمستاد",
+        "name:az": "Villemştad",
+        "name:be": "Вілемстад",
+        "name:be-x-old": "Вілемстад",
+        "name:bg": "Вилемстад",
+        "name:el": "Βίλλεμσταντ",
+        "name:eo": "Vilemstado",
+        "name:fy": "Willemstêd",
+        "name:he": "וילמסטאד",
+        "name:ja": "ウィレムスタッド",
+        "name:ka": "ვილემსტადი",
+        "name:ko": "빌렘스타트",
+        "name:lt": "Vilemstadas",
+        "name:mr": "विलेमश्टाड",
+        "name:os": "Виллемстад",
+        "name:ru": "Виллемстад",
+        "name:sr": "Вилемстад",
+        "name:th": "วิลเลมสตัด",
+        "name:uk": "Віллемстад",
+        "name:ur": "ویلمسٹیڈ",
+        "name:zh": "威廉斯塔德",
+        "place": "town",
+        "population": "140000",
+        "wikipedia": "nl:Willemstad (Curaçao)",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9316546,
+          12.1091242
+        ]
+      },
+      "id": "node/50033577"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295125474",
+        "name": "Pannekoek",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.0951723,
+          12.2677952
+        ]
+      },
+      "id": "node/295125474"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295125475",
+        "name": "Fontein",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.0610339,
+          12.2485084
+        ]
+      },
+      "id": "node/295125475"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295125482",
+        "name": "Papaya",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.987777,
+          12.18094
+        ]
+      },
+      "id": "node/295125482"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295125484",
+        "name": "Julianadorp",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.968088,
+          12.1539319
+        ]
+      },
+      "id": "node/295125484"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295125496",
+        "name": "Biesheuvel",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9055818,
+          12.1373598
+        ]
+      },
+      "id": "node/295125496"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295125507",
+        "name": "Zeelandia",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9046618,
+          12.1165852
+        ]
+      },
+      "id": "node/295125507"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295322113",
+        "name": "BocaSami (San Michiel)",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9976138,
+          12.1440307
+        ]
+      },
+      "id": "node/295322113"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295322117",
+        "is_in": "Willemstad",
+        "name": "St Willibrordus",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.0587634,
+          12.2149581
+        ]
+      },
+      "id": "node/295322117"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295322121",
+        "name": "Coral Estate",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.0777908,
+          12.2060937
+        ]
+      },
+      "id": "node/295322121"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295330893",
+        "name": "Zuurzak Villapark",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8774315,
+          12.1020984
+        ]
+      },
+      "id": "node/295330893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295330895",
+        "name": "Lagunisol",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8723583,
+          12.0898871
+        ]
+      },
+      "id": "node/295330895"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295330896",
+        "is_in": "Willemstad",
+        "name": "Brakkeput Abou",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8666575,
+          12.0849765
+        ]
+      },
+      "id": "node/295330896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "295405489",
+        "name": "Klein Curaçao",
+        "place": "island",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.6427349,
+          11.9935303
+        ]
+      },
+      "id": "node/295405489"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297058230",
+        "is_in": "Willemstad",
+        "name": "Jan Sofat",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8514189,
+          12.0822713
+        ]
+      },
+      "id": "node/297058230"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297062483",
+        "name": "Brakkeput Ariba",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8585429,
+          12.0907479
+        ]
+      },
+      "id": "node/297062483"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297063261",
+        "is_in": "Willemstad",
+        "name": "Cas Grandi",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.855757,
+          12.09467
+        ]
+      },
+      "id": "node/297063261"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297064424",
+        "is_in": "Willemstad",
+        "name": "Montaña",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8553925,
+          12.1117235
+        ]
+      },
+      "id": "node/297064424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297064544",
+        "is_in": "Willemstad",
+        "name": "Santa Rosa",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8720006,
+          12.1228636
+        ]
+      },
+      "id": "node/297064544"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297166440",
+        "name": "Westpunt",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.1536003,
+          12.3725874
+        ]
+      },
+      "id": "node/297166440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297168264",
+        "name": "Barber",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.0750653,
+          12.2921751
+        ]
+      },
+      "id": "node/297168264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297169238",
+        "name": "Groot Santa Martha",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.1111742,
+          12.274144
+        ]
+      },
+      "id": "node/297169238"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297170251",
+        "name": "Ascension",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.061999,
+          12.2734579
+        ]
+      },
+      "id": "node/297170251"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297171214",
+        "name": "Cas Abou",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.0949908,
+          12.2345802
+        ]
+      },
+      "id": "node/297171214"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297226357",
+        "name": "Tera Kora",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.0308625,
+          12.2270055
+        ]
+      },
+      "id": "node/297226357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297226775",
+        "name": "Jan Doret",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9808232,
+          12.1526741
+        ]
+      },
+      "id": "node/297226775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297229338",
+        "is_in": "Willemstad",
+        "name": "Santa Maria",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9408261,
+          12.1565338
+        ]
+      },
+      "id": "node/297229338"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297230623",
+        "is_in": "Willemstad",
+        "name": "Rio Canario",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9266747,
+          12.1480793
+        ]
+      },
+      "id": "node/297230623"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297231631",
+        "is_in": "Willemstad",
+        "name": "Buena Vista",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9340139,
+          12.1434323
+        ]
+      },
+      "id": "node/297231631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297234354",
+        "is_in": "Willemstad",
+        "name": "Otrabanda",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9374909,
+          12.1087848
+        ]
+      },
+      "id": "node/297234354"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297234567",
+        "is_in": "Willemstad",
+        "name": "Punda",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9319966,
+          12.1053173
+        ]
+      },
+      "id": "node/297234567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297235892",
+        "is_in": "Willemstad",
+        "name": "Dominguito",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8962283,
+          12.1030924
+        ]
+      },
+      "id": "node/297235892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297236149",
+        "name": "Marie Pampoen",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9022453,
+          12.0921283
+        ]
+      },
+      "id": "node/297236149"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297236986",
+        "name": "Ararat",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9217458,
+          12.1061602
+        ]
+      },
+      "id": "node/297236986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297280238",
+        "is_in": "Willemstad",
+        "name": "Parera",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9198405,
+          12.1125215
+        ]
+      },
+      "id": "node/297280238"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297289776",
+        "is_in": "Willemstad",
+        "name": "Suffisant",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9212328,
+          12.1547124
+        ]
+      },
+      "id": "node/297289776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297295158",
+        "is_in": "Willemstad",
+        "name": "Jongbloed",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8900467,
+          12.1425321
+        ]
+      },
+      "id": "node/297295158"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297295207",
+        "is_in": "Willemstad",
+        "name": "Bonam",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8814312,
+          12.1460034
+        ]
+      },
+      "id": "node/297295207"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297297083",
+        "is_in": "Willemstad",
+        "name": "Oost Sta Rosa",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8681961,
+          12.1285665
+        ]
+      },
+      "id": "node/297297083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297313692",
+        "is_in": "Willemstad",
+        "name": "Popo",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.855253,
+          12.139945
+        ]
+      },
+      "id": "node/297313692"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297313844",
+        "created_by": "Potlatch 0.10b",
+        "name": "Vetter",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8632609,
+          12.1421436
+        ]
+      },
+      "id": "node/297313844"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297326246",
+        "created_by": "Potlatch 0.10b",
+        "name": "Landhuis Habaai",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9500271,
+          12.1229106
+        ]
+      },
+      "id": "node/297326246"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "297327117",
+        "is_in": "Willemstad",
+        "name": "Veeris",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9589708,
+          12.1318643
+        ]
+      },
+      "id": "node/297327117"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "306397390",
+        "created_by": "JOSM",
+        "name": "Oostpunt",
+        "place": "locality",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.7372235,
+          12.043777
+        ]
+      },
+      "id": "node/306397390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "332801061",
+        "name": "Grote Berg",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9986034,
+          12.1918496
+        ]
+      },
+      "id": "node/332801061"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "333409667",
+        "is_in": "Willemstad",
+        "name": "Van Engelen",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8904472,
+          12.1264817
+        ]
+      },
+      "id": "node/333409667"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "333413268",
+        "is_in": "Willemstad",
+        "name": "Jan Thiel Oost",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8708943,
+          12.0907922
+        ]
+      },
+      "id": "node/333413268"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "333425348",
+        "is_in": "Willemstad",
+        "name": "Santa Catherina",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8344872,
+          12.1420952
+        ]
+      },
+      "id": "node/333425348"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "333799487",
+        "created_by": "Potlatch 0.10f",
+        "name": "Punda",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9338736,
+          12.1048882
+        ]
+      },
+      "id": "node/333799487"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "334720885",
+        "is_in": "Willemstad",
+        "name": "Brievengat",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8918705,
+          12.1532607
+        ]
+      },
+      "id": "node/334720885"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "334729197",
+        "is_in": "Willemstad",
+        "name": "Amerikanenkamp",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9132076,
+          12.1531392
+        ]
+      },
+      "id": "node/334729197"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "335613499",
+        "name": "Souax",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9701141,
+          12.1790313
+        ]
+      },
+      "id": "node/335613499"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "335613511",
+        "created_by": "Potlatch 0.10f",
+        "name": "Zegu",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9662081,
+          12.1699657
+        ]
+      },
+      "id": "node/335613511"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "335613535",
+        "created_by": "Potlatch 0.10f",
+        "name": "Wechi",
+        "place": "region",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.977881,
+          12.1696721
+        ]
+      },
+      "id": "node/335613535"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "335613567",
+        "is_in": "Willemstad",
+        "name": "Mahuma",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9569222,
+          12.1672187
+        ]
+      },
+      "id": "node/335613567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "335613698",
+        "is_in": "Willemstad",
+        "name": "Santa Maria",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9435406,
+          12.1640006
+        ]
+      },
+      "id": "node/335613698"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "337915252",
+        "is_in": "Willemstad",
+        "name": "Zuid Santa Rosa",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8689579,
+          12.1132245
+        ]
+      },
+      "id": "node/337915252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "354960859",
+        "is_in": "Willemstad",
+        "name": "Toni Kunchi",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8868064,
+          12.121458
+        ]
+      },
+      "id": "node/354960859"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "614709673",
+        "is_in": "Willemstad",
+        "name": "Nieuwpoort",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8296749,
+          12.0503612
+        ]
+      },
+      "id": "node/614709673"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "638515929",
+        "name": "Salinja",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9054146,
+          12.1077014
+        ]
+      },
+      "id": "node/638515929"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "639265771",
+        "is_in": "Willemstad",
+        "name": "Jan Thiel",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8708885,
+          12.0814771
+        ]
+      },
+      "id": "node/639265771"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "639265899",
+        "name": "Bottelier",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8848535,
+          12.0999993
+        ]
+      },
+      "id": "node/639265899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "639266239",
+        "is_in": "Willemstad",
+        "name": "Scharloo",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.92499,
+          12.1058633
+        ]
+      },
+      "id": "node/639266239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "648241926",
+        "is": "Willemstad",
+        "name": "Emmastad",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9159542,
+          12.1397347
+        ]
+      },
+      "id": "node/648241926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "648243582",
+        "name": "Piscadera",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9679378,
+          12.1229055
+        ]
+      },
+      "id": "node/648243582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "648254428",
+        "name": "Santa Rosa",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8992947,
+          12.1204929
+        ]
+      },
+      "id": "node/648254428"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "648256466",
+        "is_in": "Willemstad",
+        "name": "Janwe",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8923425,
+          12.1086184
+        ]
+      },
+      "id": "node/648256466"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "648260642",
+        "is_in": "Willemstad",
+        "name": "Abrahamsz",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8665503,
+          12.1371499
+        ]
+      },
+      "id": "node/648260642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "710532886",
+        "name": "Pietermaai",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9305015,
+          12.1037833
+        ]
+      },
+      "id": "node/710532886"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1038445031",
+        "capital_city": "Willemstad",
+        "country_code_fips": "UC",
+        "country_code_iso3166_1_alpha_2": "CW",
+        "is_in": "Kingdom of the Netherlands",
+        "is_in:continent": "North America",
+        "is_in:sea": "Caribbean Sea",
+        "name": "Curaçao",
+        "name:am": "ኩራሳዎ",
+        "name:ar": "كوراساو",
+        "name:be": "Кюрасаа",
+        "name:bg": "Кюрасао",
+        "name:bn": "কুরাসাও",
+        "name:ca": "Curaçao",
+        "name:chr": "ᏂᎦᏓ ᎤᏂᎲ ᎾᎿ ᎫᎳᎨᎣ",
+        "name:cy": "Cwracao",
+        "name:da": "Curacao",
+        "name:dz": "ཀྱཱུར་ར་ཀོ",
+        "name:ee": "Kurakao nutome",
+        "name:el": "Κουρασάο",
+        "name:en": "Curaçao",
+        "name:es": "Curazao",
+        "name:fa": "کوراکائو",
+        "name:fi": "Curaçao",
+        "name:fr": "Curaçao",
+        "name:gu": "કુરાકાઓ",
+        "name:he": "קוראסאו",
+        "name:hi": "क्यूरासाओ",
+        "name:is": "Curacao",
+        "name:ja": "キュラソー",
+        "name:km": "កូរ៉ាកៅ",
+        "name:kn": "ಕುರಾಕಾವ್",
+        "name:ko": "퀴라소",
+        "name:lo": "ເຄີເລັກຄາວ",
+        "name:lt": "Kiurasao",
+        "name:lv": "Kirasao",
+        "name:mk": "Курасао",
+        "name:ml": "കുറാകാവോ",
+        "name:mr": "कुरॅको",
+        "name:ms": "Curacao",
+        "name:ne": "कुराकाओ",
+        "name:no": "Curaçao",
+        "name:pap": "Kòrsou",
+        "name:ru": "Кюрасао",
+        "name:si": "කුරකාවෝ",
+        "name:sr": "Курасао",
+        "name:sv": "Curaçao",
+        "name:sw": "Kurakao",
+        "name:ta": "குராகவ்",
+        "name:te": "కురాకవో",
+        "name:th": "คูราเซา",
+        "name:to": "Kulasao",
+        "name:uk": "Кюрасао",
+        "name:ur": "کیوراکاؤ",
+        "name:vi": "Curaçao",
+        "name:zh": "库拉索",
+        "name:zu": "I-Curaçao",
+        "place": "country",
+        "wikipedia": "en:Curaçao",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9530627,
+          12.1721167
+        ]
+      },
+      "id": "node/1038445031"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1149171112",
+        "is_in": "Willemstad",
+        "name": "Seru Fortune",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9358078,
+          12.1740147
+        ]
+      },
+      "id": "node/1149171112"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1149223842",
+        "is_in": "Willemstad",
+        "name": "Lagun",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.1499917,
+          12.3221742
+        ]
+      },
+      "id": "node/1149223842"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1149224815",
+        "is_in": "Willemstad",
+        "name": "Jan Donker",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.1246717,
+          12.2989039
+        ]
+      },
+      "id": "node/1149224815"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1149225576",
+        "is_in": "Willemstad",
+        "name": "Soto",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.1101234,
+          12.2789862
+        ]
+      },
+      "id": "node/1149225576"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1151180176",
+        "name": "Gasparitu",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9502473,
+          12.1361686
+        ]
+      },
+      "id": "node/1151180176"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1157611147",
+        "is_in": "Willemstad",
+        "name": "Steenrijk",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9094153,
+          12.1020969
+        ]
+      },
+      "id": "node/1157611147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279445517",
+        "name": "V1-18",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8731856,
+          12.0735646
+        ]
+      },
+      "id": "node/1279445517"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279445518",
+        "name": "W1-24",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8722307,
+          12.0731869
+        ]
+      },
+      "id": "node/1279445518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279446093",
+        "name": "T1-17",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8707394,
+          12.0752433
+        ]
+      },
+      "id": "node/1279446093"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279446095",
+        "name": "S1-24",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.871896,
+          12.0752249
+        ]
+      },
+      "id": "node/1279446095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279453263",
+        "name": "Q23-35",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8738508,
+          12.075558
+        ]
+      },
+      "id": "node/1279453263"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279453264",
+        "name": "Q11-22",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8746211,
+          12.0747947
+        ]
+      },
+      "id": "node/1279453264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279453265",
+        "name": "U1-27",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8752112,
+          12.0740703
+        ]
+      },
+      "id": "node/1279453265"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279453266",
+        "name": "Q1-10",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8729603,
+          12.0765652
+        ]
+      },
+      "id": "node/1279453266"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279455848",
+        "name": "Q36-43",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8722206,
+          12.0763675
+        ]
+      },
+      "id": "node/1279455848"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279455851",
+        "name": "O1-15",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8738192,
+          12.0768396
+        ]
+      },
+      "id": "node/1279455851"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279455870",
+        "name": "N1-29",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8756646,
+          12.076378
+        ]
+      },
+      "id": "node/1279455870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279455875",
+        "name": "R1-22",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8732077,
+          12.0749931
+        ]
+      },
+      "id": "node/1279455875"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1279455881",
+        "name": "P1-16",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8751818,
+          12.0756541
+        ]
+      },
+      "id": "node/1279455881"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1286823064",
+        "name": "Bullenbaai",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.0156722,
+          12.1862767
+        ]
+      },
+      "id": "node/1286823064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1286823065",
+        "name": "Piscadera Baai",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9687657,
+          12.1341298
+        ]
+      },
+      "id": "node/1286823065"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1286823066",
+        "name": "bullenbaai",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.0241823,
+          12.1954087
+        ]
+      },
+      "id": "node/1286823066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1286827671",
+        "name": "ISLA",
+        "place": "hamlet",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.927213,
+          12.1245531
+        ]
+      },
+      "id": "node/1286827671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1677776901",
+        "is_in": "Willemstad",
+        "name": "Cas Cora",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8943001,
+          12.1367272
+        ]
+      },
+      "id": "node/1677776901"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1677776902",
+        "is_in": "Willemstad",
+        "name": "Damacor",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8987038,
+          12.1332395
+        ]
+      },
+      "id": "node/1677776902"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1799969288",
+        "name": "Koraal Specht",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8960984,
+          12.0962879
+        ]
+      },
+      "id": "node/1799969288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "1974356395",
+        "place": "suburb",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.8537197,
+          12.1231491
+        ]
+      },
+      "id": "node/1974356395"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@type": "node",
+        "@id": "2142952243",
+        "name": "Sans-Souci",
+        "place": "neighbourhood",
+        "@relations": []
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.9537464,
+          12.1350087
+        ]
+      },
+      "id": "node/2142952243"
+    }
+  ]
+}

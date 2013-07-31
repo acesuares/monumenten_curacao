@@ -17,8 +17,10 @@
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "palette.mss",
+    "labels.mss",
     "base.mss",
-    "roads.mss"
+    "roads.mss",
+    "places.mss"
   ],
   "Layer": [
     {
@@ -77,6 +79,27 @@
       "srs": "",
       "advanced": {},
       "name": "roads"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -69.1536003,
+        11.9935303,
+        -68.6427349,
+        12.3725874
+      ],
+      "id": "places",
+      "class": "",
+      "Datasource": {
+        "file": "/Users/bert/dev/checkouts/monumenten_curacao/tilemill_project/layers/places.geojson",
+        "id": "places",
+        "project": "tilemill_project",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "places"
     }
   ],
   "scale": 1,
