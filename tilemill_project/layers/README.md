@@ -48,3 +48,7 @@ http://overpass-turbo.eu/
     <bbox-query {{bbox}}/>
   </query>
   <print/>
+  
+# mbtiles to separate png files
+
+https://github.com/mapbox/mbutil
