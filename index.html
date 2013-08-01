@@ -62,6 +62,8 @@
         populateList("#museum-list", data, function(d) {return d.properties.name; });
         addMapData('museums', data);
       });
+      
+      locate();
   	
       // $.getJSON('https://rawgithub.com/bertspaan/monumenten_curacao/master/routes.json', function(data) {
       //   populateList("#route-list", data, function(d) {return d.properties.name; });
