@@ -3,8 +3,9 @@ var map,
 function initMap() {
 	
 	map = L.map('map').setView([12.109913, -68.937321], 15);
-
-  var lineStyle = {
+ 	map.locate({setView: true, maxZoom: 21});
+ 
+ var lineStyle = {
     color: "#CE2027",
     weight: 3,
     opacity: 0.90
