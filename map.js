@@ -3,7 +3,7 @@ var map,
 function initMap() {
 	
 	map = L.map('map').setView([12.109913, -68.937321], 15);
- 	map.locate({setView: true, maxZoom: 21});
+ 	map.locate({setView: true, maxZoom: 12});
  
  var lineStyle = {
     color: "#CE2027",
