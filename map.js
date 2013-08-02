@@ -42,7 +42,7 @@ function initMap() {
     //disableClusteringAtZoom: 17
     showCoverageOnHover: false,
     spiderfyDistanceMultiplier: 1.2,
-    maxClusterRadius: 40
+    maxClusterRadius: 10
   });
 
   function onEachFeature(feature, layer) {        
